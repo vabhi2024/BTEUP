@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <link rel="icon" type="image/png" href="favicon.png">
+   <link rel="manifest" href="manifest.json">
+    <link href="style.css" rel="stylesheet">
+      <title>BTEUP Home</title>
+  </head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo"><i class="fa fa-graduation-cap"></i> BTEUP</div>
+        <nav>
+           <button class="login" onclick="openPopup()">Login</button>
+            <button class="menu-btn" onclick="openMenu()"><i class="fa fa-bars"></i></button>
+         </nav>
+    </header>
+
+    <!-- Full Screen Dropdown -->
+    <div id="full-screen-menu" class="menu-overlay">
+        <button class="close-btn" onclick="closeMenu()">✖</button>
+        <div class="menu-content">
+            <a href="index.html">Home</a>
+            <a href="http://adtech2021.netlify.app">About us</a>
+            <a href="mailto:info@adtech.up.in">Contact us</a>
+            <a href="http://instagram.com/adtech.up.in">Explore more</a>            
+        </div>
+    </div>
+ 
+  <br>
+ 
+       <!-- Main -->
+    
+<style>
+  
+  .container {   
+    background: #fff;
+    border-radius: 14px;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+  }
+
+  @keyframes fadeUp {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .title {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    animation: slideIn 0.8s ease;
+  }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .title h1 {
+    margin: 0;
+    font-size: 26px;
+    color: #1e3a8a;
+  }
+
+  .info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .box {
+    background: #f9fafb;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    animation: popIn 0.8s ease;
+  }
+
+  .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  @keyframes popIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .box h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #1f2937;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+
+  .box p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #374151;
+  }
+
+  .table-section {
+    padding: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+  }
+
+  th {
+    background: #1e3a8a;
+    color: white;
+  }
+
+  tr {
+    transition: 0.3s;
+    animation: rowFade 0.6s ease;
+  }
+
+  @keyframes rowFade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  tr:nth-child(even) {
+    background: #f9fafb;
+  }
+
+  tr:hover {
+    background: #e0e7ff;
+    transform: scale(1.01);
+  }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">  
+
+  <div class="title">
+    <h1>Institute Details :</h1>
+  </div>
+
+  <div class="info">
+
+    <div class="box">
+      <h3>Institute Code / Name</h3>
+      <p>Institute Code: 2208</p>
+      <p>Govt. Polytechnic, Barabanki</p>
+      <p>Institute Type: Government</p>
+    </div>
+
+    <div class="box">
+      <h3>Contact</h3>
+      <p>Website: gpbarabanki.com</p>
+      <p>Email: gpbpk@rediffmail.com</p>
+      <p>Mobile: 9415928168</p>
+      <p>Alt Mobile: 8948998409</p>
+    </div>
+
+    <div class="box">
+      <h3>Address</h3>
+      <p>Jahangirabad Road</p>
+      <p>District: Barabanki</p>
+      <p>Pincode: 225123</p>
+    </div>
+
+  </div>
+
+     <div class="title">
+    <h1>Branch Details :</h1>
+  </div>
+    
+  <div class="table-section">
+   <table>
+      <tr>
+        <th>S. No.</th>
+        <th>Branch Code</th>
+        <th>Branch Name</th>
+        <th>Total Seats</th>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>107</td>
+        <td>P.G. Diploma in Marketing and Sales Management</td>
+        <td>75</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>330</td>
+        <td>Electronics Engineering</td>
+        <td>75</td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td>331</td>
+        <td>Electronics Engineering (Modern Consumer Electronics Appliances)</td>
+        <td>75</td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td>380</td>
+        <td>Electronics Engineering (Lateral Entry)</td>
+        <td>7</td>
+      </tr>
+
+      <tr>
+        <td>5</td>
+        <td>381</td>
+        <td>Electronics Engineering (Modern Consumer Electronics Appliances) (Lateral Entry)</td>
+        <td>7</td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</div>
+    
+    <br><br>
+  <!-- Footer -->
+    <footer>
+        <p class="text">&copy; 2026 - Designed & Developed with ♥️ <a href="https://adtech2021.netlify.app/">ADTech Inc.</a></p>
+    </footer>
+  <script src="a-button.js"></script>
+</body>
+</html>

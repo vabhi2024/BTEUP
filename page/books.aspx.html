@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+   <link rel="manifest" href="manifest.json">
+    <link href="style.css" rel="stylesheet">
+      <title>BTEUP Home</title>
+  </head>
+<body>
+    <style>
+      /* Each toast */
+    .toast {
+      position: relative;      
+      background: #000;
+       color: yellow;
+       padding: 15px;
+       width: 95%;
+       border-radius: 0 0 50px 0; 
+       white-space: nowrap;
+
+      /* animation */
+      opacity: 0;
+      transform: translateX(-200px);
+      animation: slideIn 0.4s forwards, fadeOut 0.5s forwards 1.2s;
+    }
+
+    /* Left → Center */
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Fade out */
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: translateX(0) scale(0.9);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="container"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="logo"><i class="fa fa-graduation-cap"></i> BTEUP</div>
+        <nav>
+           <button class="login" onclick="openPopup()">Login</button>
+            <button class="menu-btn" onclick="openMenu()"><i class="fa fa-bars"></i></button>
+         </nav>
+    </header>
+ 
+  <br>
+    <br>
+    <br> 
+       <!-- main card -->
+ <div class="m-card">
+ <a href="#" class="card">
+  First Semester Books
+</a>
+     
+ <a href="#" class="card">
+  Second Semester Books
+</a>
+     
+ <a href="#" class="card">
+  Third Semester Books
+</a>
+     
+ <a href="#" class="card">
+  Forth Semester Books
+</a>
+     
+ <a href="#" class="card">
+  Fifth Semester Books
+</a>
+     
+ <a href="#" class="card">
+  Final Semester Books
+</a>     
+</div>
+    
+    <br><br>
+  <!-- Footer -->
+    <footer>
+        <p class="text">&copy; 2026 - Designed & Developed with ♥️ <a href="https://adtech2021.netlify.app/">ADTech Inc.</a></p>
+    </footer>
+    
+    <script>
+  const links = document.querySelectorAll("a");
+  const container = document.getElementById("container");
+
+  links.forEach(link => {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+
+      // create new toast every click
+      const toast = document.createElement("div");
+      toast.className = "toast";
+      toast.textContent = "Available Soon!";
+
+      container.appendChild(toast);
+
+      // remove after animation ends
+      setTimeout(() => {
+        toast.remove();
+      }, 1800);
+    });
+  });
+</script>
+    
+  <script src="a-button.js"></script>
+</body>
+</html>
