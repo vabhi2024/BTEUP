@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="manifest" href="manifest.json">
+    <link href="style.css" rel="stylesheet">
+      <title>BTEUP Home</title>
+  </head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo"><i class="fa fa-graduation-cap"></i> BTEUP</div>
+        <nav>
+           <button class="login" onclick="openPopup()">Login</button>
+            <button class="menu-btn" onclick="openMenu()"><i class="fa fa-bars"></i></button>
+         </nav>
+    </header>
+
+    <!-- Full Screen Dropdown -->
+    <div id="full-screen-menu" class="menu-overlay">
+        <button class="close-btn" onclick="closeMenu()">✖</button>
+        <div class="menu-content">
+            <a href="index.html">Home</a>
+            <a href="page/about.institute.html">About us</a>
+            <a href="mailto:gpbpk@rediffmail.com">Contact us</a>
+            <a href="http://gpbarabanki.com">Explore more</a>  
+            <a href="http://bteup1.netlify.app/apps/bteup_official_v1.0.0.apk" download>Download Apps</a>              
+        </div>
+    </div>
+    
+    <!-- Popup Login -->
+    
+  <div id="popup" class="popup">
+  <div class="popup-content">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp-svVyN8D-JNdFxML1VqjeIlN1dTT8hDrMci1j7JTQA&s=10" height="auto" width="150px" alt="logo">
+    <a href="https://bteup.ac.in/Eseva/Outerpages/StudentLogin.aspx">
+   <i class="fa-solid fa-user-graduate"></i> | Student Login
+ </a>
+      
+  <a href="https://bteup.ac.in/webapp/ExaminerLogin.aspx">
+   <i class="fa-solid fa-user-tie"></i> | Examiner Login
+ </a>
+
+  <a href="https://bteup.ac.in/webapp/Institutelogin.aspx">
+   <i class="fa-solid fa-building-columns"></i> | Institute Login
+</a>
+      <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+  
+  <br>
+  <br>
+  <br>
+ 
+      <!-- SLIDER --> 
+    
+      <div class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide"><img src="slider/1.jpg"></div>
+            <div class="carousel-slide"><img src="slider/4.jpg"></div>
+            <div class="carousel-slide"><img src="slider/3.jpg"></div>
+            <div class="carousel-slide"><img src="slider/5.jpg"></div>
+            <div class="carousel-slide"><img src="slider/2.jpg"></div>
+            </div>
+    </div>
+  
+   <!-- GOOGLE SEARCH -->
+  
+  <div class="search-main">
+    <input class="search" type="search" id="search-input" placeholder="Google Search" />
+    <span class="icon" onclick="performSearch()"><i class="fa fa-search"></i></span>
+  </div>
+    
+     <!-- main card -->
+ <div class="m-card">
+ <a href="https://bteup.ac.in/Eseva/Outerpages/StudentLogin.aspx" class="card">
+  <i class="fa fa-book"></i><br>Examination
+</a>
+
+<a href="https://bteup.ac.in/Eseva/Outerpages/StudentLogin.aspx" class="card">
+  <i class="fa fa-id-card"></i><br>Admit Card
+</a>
+
+<a href="page/results.aspx.html" class="card">
+  <i class="fa fa-trophy"></i><br>Results
+</a>
+
+<a href="page/revolution.aspx.html" class="card">
+  <i class="fa fa-flag"></i><br>Revolution
+</a>
+</div>
+    
+    <!-- news -->
+ <h4 class="h4">Latest Updates</h4>
+ <div class="scroll-wrapper">
+  <iframe src="https://bteup.ac.in/webapp/AllNews.aspx"></iframe>     
+</div>
+<a class="abhi-btn" href="https://bteup.ac.in/webapp/AllNews.aspx">View All News</a>
+
+    <script>
+  let pos = 0;
+
+  const iframe = document.getElementById("myFrame");
+
+  setInterval(() => {
+    const doc = iframe.contentWindow.document;
+    pos += 5;
+    doc.documentElement.scrollTop = pos;
+  }, 50);
+</script>
+  
+   <!-- Card Row -->
+  
+    <div class="card-row">
+<a href="page/syllabus.aspx.html" class="card">
+  <i class="fa fa-list-alt"></i> Syllabus
+</a>
+
+<a href="https://haiderparamedical.in/wp-content/uploads/2025/08/academic-calender-2025-26.pdf" class="card">
+  <i class="fa fa-calendar"></i> Holiday
+</a>
+        
+ <a href="page/books.aspx.html" class="card">
+  <i class="fa fa-book"></i> PDF Books
+</a>
+
+<a href="page/10yr.aspx.html" class="card">
+  <i class="fa fa-history"></i> 10 Years
+</a>
+    </div>
+    
+    <hr style="width:95%; margin: 0 auto; margin-bottom:15px;">
+    
+   <!-- Advertisement -->
+    
+    <div class="ads-img">
+    <img src="img/ads.jpg" alt="ads-img">
+    </div>
+    
+    
+  <!-- Footer -->
+    <footer>
+        <p class="text">&copy; 2026 - Designed & Developed with ♥️ <a href="https://adtech2021.netlify.app/">ADTech Inc.</a></p>
+    </footer>
+  
+  <script src="js/slider.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/login.js"></script> 
+  <script src="js/a-button.js"></script>    
+</body>
+</html>
