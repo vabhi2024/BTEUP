@@ -43,8 +43,10 @@ body {
    margin-bottom: 15px;
    background: skyblue;
    padding: 10px;
-   width: 93%;
-   border-radius: 10px;
+   width: 92%;
+   border: 1px solid black;
+   border-bottom: none;
+   border-radius: 10px 10px 0 0;
 }
 
 .p {
@@ -300,8 +302,11 @@ nav {
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  border: 1px solid #999; 
-  border-radius: 10px; 
+  border: none;
+   border-radius: 0 0 10px 10px;
+   margin: 0 auto;
+   margin-top:  -18px;
+   margin-bottom: 0;
 }
 
 .scroll-wrapper iframe {
@@ -361,6 +366,29 @@ nav {
   color: black;
   display: block;
   transition: 0.3s;
+}
+
+/* Sarkari Result*/
+
+.iframe-container {
+    width: 92%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 0 0 10px 10px;
+    margin: 0 auto;
+   margin-top:  -18px;
+   border-top: none;
+   margin-bottom: 12px;
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 3800px;     
+    border: none;
+    margin-top: -410px; 
+    margin-bottom: -450px; 
 }
 
 /* Ads Img */
