@@ -109,9 +109,20 @@
   <i class="fa fa-book"></i><br>Examination
 </a>
 
-<a href="https://bteup.ac.in/Eseva/Outerpages/StudentLogin.aspx" class="card">
+<!-- Popup Admit card -->
+<div class="card" onclick="openpac()">
   <i class="fa fa-id-card"></i><br>Admit Card
-</a>
+</div>
+      
+ <div class="pac" id="pac">
+  <div class="pac-box">
+    <span class="pac-close" onclick="closepac()">×</span>
+    <img class="pac-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkrLZsaZNhIPcSjUTJK124zU9hQQ24fKfkNOdnIMl-eA&s=10">
+      <input type="text" id="enroll" placeholder="Enter Enrollment No.">
+    <br>
+    <button onclick="submitForm()">Get Admit Card</button>
+  </div>
+</div>
 
 <a href="page/results.aspx.html" class="card">
   <i class="fa fa-trophy"></i><br>Results
@@ -183,6 +194,7 @@
   <script src="js/search.js"></script>
   <script src="js/script.js"></script>
   <script src="js/login.js"></script> 
-  <script src="js/a-button.js"></script>    
+  <script src="js/a-button.js"></script> 
+  <script src="js/pac.js"></script>    
 </body>
 </html>
