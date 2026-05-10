@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTEUP Official | App</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Header Banner */
+        .top-banner {
+            background-color: #00bcd4;
+            color: white;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-text h1 {
+            font-size: clamp(1rem, 4vw, 1.4rem);
+            font-weight: 5500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .header-text p {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Main Hero Section */
+        .hero-container {
+            display: flex;
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .content-side {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            z-index: 2;
+        }
+
+        /* The Tilted Headline */
+        .headline {
+            transform: rotate(-7deg);
+            margin-bottom: 40px;
+        }
+
+        .highlight-text {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #000;
+        }
+
+        .sub-headline {
+            background: #000;
+            color: #fff;
+            padding: 5px 50px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        /* App Icon Card with Glow */
+        .app-card {
+            background: linear-gradient(135deg, #2196f3, #1976d2);
+            padding: 40px;
+            border-radius: 35px;
+            box-shadow: 0 15px 40px rgba(33, 150, 243, 0.4);
+            margin-bottom: 30px;
+            color: white;
+            width: 220px;
+            transition: transform 0.3s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .app-icon h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-top: 10px;
+        }
+
+        .app-icon p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Download Button */
+        .download-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        .download-btn:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .approval-text {
+            margin-top: 25px;
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        /* Image Side */
+        .image-side {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hero-img {
+            max-width: 100%;
+            height: auto;
+            /* Placeholder styling */
+            filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.1));
+        }
+
+        /* Footer */
+        .contact-footer {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 500;
+            font-size: 0.8rem;
+        }
+
+        .contact-item i {
+            color: #00bcd4;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 900px) {
+            .hero-container {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 20px;
+            }
+            .headline {
+                transform: rotate(0deg); /* Clearer on mobile */
+            }
+            .divider {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top-banner">
+        <div class="header-text">
+            <h1>UTTAR PRADESH BOARD OF TECHNICAL EDUCATION</h1>
+            <p>प्राविधिक शिक्षा परिषद् e-सेवाएं</p>
+        </div>
+    </header>
+
+    <main class="hero-container">
+        <div class="content-side">
+            <div class="headline">
+                <span class="highlight-text">Empower<br> Your Technical Journey</span>
+                <span class="sub-headline">With BTEUP!</span>
+            </div>
+
+            <div class="app-card">
+                <div class="app-icon">
+                    <i class="fas fa-graduation-cap" style="font-size: 3rem; color: #ffd700;"></i>
+                    <h2>BTEUP</h2>
+                    <p>── OFFICIAL ──</p>
+                </div>
+            </div>
+
+            <button class="download-btn" id="dlBtn">
+                <i class="fas fa-cloud-download-alt"></i> Download App
+            </button>
+
+            <p class="approval-text">
+                © Approved by - <br>
+                <strong>Government Polytechnic Barabanki</strong>
+            </p>
+        </div>
+       
+    </main>
+
+    <footer class="contact-footer">
+        <div class="contact-item">
+            <i class="fas fa-envelope"></i> contact@bteup.ac.in
+        </div>
+        <div class="divider"></div>
+        <div class="contact-item">
+            <i class="fas fa-globe"></i> www.bteup.ac.in
+        </div>
+    </footer>
+
+   <script>
+    document.getElementById('dlBtn').addEventListener('click', function() {
+         const fileUrl = "bteup_official_v1.0.0.apk"; 
+         window.location.href = fileUrl;
+    });
+</script>
+
+
+</body>
+</html>
