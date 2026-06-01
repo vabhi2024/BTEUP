@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="manifest" href="manifest.json">
     <link href="style.css" rel="stylesheet">
+    <link href="wa-card.css" rel="stylesheet">
 
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQNH2W1ZDM"></script>
@@ -26,7 +27,7 @@
 <meta property="og:description" content="• Latest News | Admit Card | Results | 10-Year Papers | Syllabus | e-Books and more access to all exam informations or students data. | ADTech India">
 <meta property="og:url" content="https://bteup1.netlify.app">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://bteup1.netlify.app/img/ads.jpg">
+<meta property="og:image" content="https://bteup1.netlify.app/app-icon.png">
 
 <!-- OG meta imp tag -->
 <meta property="og:image" content="https://bteup1.netlify.app/img/ads.jpg">
@@ -103,17 +104,45 @@
     <span class="icon" onclick="performSearch()"><i class="fa fa-search"></i></span>
   </div>
     
-     <!-- main card -->
- <div class="m-card">
- <a href="https://bteup.ac.in/Eseva/Outerpages/StudentLogin.aspx" class="card">
-  <i class="fa fa-book"></i><br>Examination
-</a>
+   <!-- Home section -->
+  
+    <div class="dashboard-wrapper">
+        <button class="center-circle" id="whatsappBtn">
+            <i class="fab fa-whatsapp"></i>
+        </button>
 
-<!-- Popup Admit card -->
-<div class="card" onclick="openpac()">
-  <i class="fa fa-id-card"></i><br>Admit Card
-</div>
-      
+        <a href="https://bteup.ac.in/Eseva/Outerpages/StudentLogin.aspx" class="crd">
+            <i class="fas fa-book"></i>
+            <h2>Examination</h2>
+        </a>
+        <div class="crd" onclick="openpac()">
+            <i class="fas fa-id-card"></i>
+            <h2>Admit Card</h2>
+        </div>
+        <a href="page/results.aspx.html" class="crd">
+            <i class="fas fa-trophy"></i>
+            <h2>Results</h2>
+        </a>
+        <a href="page/revolution.aspx.html" class="crd">
+            <i class="fas fa-flag"></i>
+            <h2>Revolution</h2>
+        </a>
+    </div>
+
+       <!-- Popup Whatsapp card -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <span class="cls-btn" id="closeBtn">&times;</span>
+            <i class="fab fa-whatsapp" style="font-size: 5rem; color: #25D366; margin-bottom: 10px;"></i>
+            <h3>Contact Support?</h3>
+            <p style="margin: 10px 0; color: #666;">You can contact us for any help, information or inquiry.</p>
+            <a href="https://wa.me/+919415928168" target="_blank" class="whatsapp-link-btn">
+                Chat Now
+            </a>
+        </div>
+    </div>
+    
+       <!-- Popup Admit card -->
  <div class="pac" id="pac">
   <div class="pac-box">
     <span class="pac-close" onclick="closepac()">×</span>
@@ -124,16 +153,7 @@
   </div>
 </div>
 
-<a href="page/results.aspx.html" class="card">
-  <i class="fa fa-trophy"></i><br>Results
-</a>
-
-<a href="page/revolution.aspx.html" class="card">
-  <i class="fa fa-flag"></i><br>Revolution
-</a>
-</div>
-    
-    <!-- news -->
+        <!-- news -->
  <h4 class="h4">Latest Updates</h4>
  <div class="scroll-wrapper">
   <iframe src="https://bteup.ac.in/webapp/AllNews.aspx"></iframe>     
@@ -156,33 +176,83 @@
   
     <div class="card-row">
 <a href="page/syllabus.aspx.html" class="card">
-  <i class="fa fa-list-alt"></i> Syllabus
+  <i class="fa fa-list-alt"></i>‌‌ Syllabus
 </a>
 
 <a href="https://haiderparamedical.in/wp-content/uploads/2025/08/academic-calender-2025-26.pdf" class="card">
-  <i class="fa fa-calendar"></i> Holiday
+  <i class="fa fa-calendar"></i>‌ Holiday
 </a>
         
  <a href="page/books.aspx.html" class="card">
-  <i class="fa fa-book"></i> PDF Books
+  <i class="fa fa-book"></i>‌ PDF Books
 </a>
 
 <a href="page/10yr.aspx.html" class="card">
-  <i class="fa fa-history"></i> 10 Years
+  <i class="fa fa-history"></i>‌ 10 Years
 </a>
     </div>
     
         <!-- Sarkari Result -->
-    <h4 class="h4">Govt. Updates</h4>
+    <h4 class="h4">Govt Updates</h4>
     <div class="iframe-container">
       <iframe src="https://sarkariresult.com.cm/"></iframe>
 </div>
     
-   <!-- Advertisement -->
+   <!-- Location -->
     
-    <div class="ads-img">
-    <img src="img/ads.jpg" alt="ads-img">
-    </div>
+    <h4 class="h4">Our Location</h4>
+   <div class="map-section">
+     <iframe
+        src="https://maps.google.com/maps?width=600&height=200&hl=en&q=Government%20polytechnic%20Barabanki&t=&z=17&ie=UTF8&iwloc=B&output=embed"
+        loading="lazy"
+        allowfullscreen>
+    </iframe>
+</div>
+    
+    <!-- Quick Link -->
+<div class="quick-links-grid">
+
+    <a href="https://urise.up.gov.in/" target="_blank" class="link-card">
+        <img src="img/link.png" alt="Logo">
+        <h4>URISE Portal</h4>
+    </a>
+
+    <a href="https://bteup.ac.in/" target="_blank" class="link-card">
+        <img src="img/link.png" alt="Logo">
+        <h4>BTEUP Official</h4>
+    </a>
+
+    <a href="https://www.abc.gov.in/" target="_blank" class="link-card">
+        <img src="img/link.png" alt="Logo">
+        <h4>ABC APAAR</h4>
+    </a>
+
+    <a href="https://gpbarabanki.com/" target="_blank" class="link-card">
+        <img src="img/link.png" alt="Logo">
+        <h4>GPBarabanki</h4>
+    </a>
+
+    <a href="https://www.aicte-india.org/" target="_blank" class="link-card">
+        <img src="img/link.png" alt="Logo">
+        <h4>AICTE Portal</h4>
+    </a>
+
+    <a href="https://jeecup.admissions.nic.in/" target="_blank" class="link-card">
+        <img src="img/link.png" alt="Logo">
+        <h4>JEECUP Portal</h4>
+    </a>
+
+    <a href="https://scholarship.up.gov.in/" target="_blank" class="link-card">
+        <img src="img/link.png" alt="Logo">
+        <h4>Scholarship</h4>
+    </a>
+
+    <a href="https://www.antiragging.in/" target="_blank" class="link-card">
+        <img src="img/link.png" alt="Logo">
+        <h4>Anti-Ragging</h4>
+    </a>
+
+</div>
     
     
   <!-- Footer -->
@@ -194,6 +264,7 @@
   <script src="js/search.js"></script>
   <script src="js/script.js"></script>
   <script src="js/login.js"></script> 
+  <script src="js/wa-card.js"></script>  
   <script src="js/a-button.js"></script> 
   <script src="js/pac.js"></script>    
 </body>
