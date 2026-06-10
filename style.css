@@ -208,14 +208,13 @@ nav {
     cursor: none;
 }
   
-/* SLIDER */
-
+/* --- SLIDER MAIN CONTAINER --- */
 .carousel {
     margin: 0 auto;
     width: 93%;
     overflow: hidden;
     border-radius: 10px;
-  
+    position: relative; 
 }
 
 .carousel-container {
@@ -230,15 +229,15 @@ nav {
     border-radius: 10px;
     justify-content: center;
     align-items: center;
-    background-color: none;
+    background-color: transparent; 
     color: white;
     font-size: 2rem;
 }
 
 .carousel-container img {
-  height: auto;
-  width: 100%;
-  border-radius: 10px;
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
 }
 
 /* --- JOB BUTTON --- */
@@ -257,6 +256,8 @@ nav {
     cursor: pointer;
     z-index: 10;   
 }
+
+
 
 /* GOOGLE SEARCH BAR */
 
