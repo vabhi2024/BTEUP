@@ -107,7 +107,8 @@ footer a {
    margin-bottom: -10px;
 }
     </style>
-    <title>BTEUP Job</title>
+
+    <title>BTEUP Official</title>
   
 <div id="container"></div>
     
