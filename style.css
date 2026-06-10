@@ -241,6 +241,23 @@ nav {
   border-radius: 10px;
 }
 
+/* --- JOB BUTTON --- */
+.job-btn {
+    position: absolute;
+    bottom: 5px;      
+    left: 50%;         
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 98%;
+    font-weight: 550;
+    background: rgba(255, 255, 0, 0.9); 
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10;   
+}
+
 /* GOOGLE SEARCH BAR */
 
 .search-main{
