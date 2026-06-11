@@ -2,52 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BTEUP Official | App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>BTEUP Home</title>
+  </head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo"><i class="fa fa-graduation-cap"></i> BTEUP</div>
+        <nav>
+           <button class="login" onclick="openPopup()">Login</button>
+            <button class="menu-btn" onclick="openMenu()"><i class="fa fa-bars"></i></button>
+         </nav>
+    </header>
+ 
+  <br>
+  <br>
+  <br>
+    
+    <style>        
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';  
+  }
+  
+body, html {
+    color: #000;
+    height: auto;
+    background: url("bg.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+/* Header */
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background: #fff;
+    color: red;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
 
-        body {
-            background-color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+.logo {
+   color: black;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Poppins';
+}
 
-        /* Header Banner */
-        .top-banner {
-            background-color: #00bcd4;
-            color: white;
-            padding: 12px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+nav {
+    display: flex;
+    align-items: center;
+}
 
-        .header-text h1 {
-            font-size: clamp(1rem, 4vw, 1.4rem);
-            font-weight: 5500;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
+.btn, .menu-btn {
+    background: none;
+    color: black;
+    border: none ;
+    margin: 6px;
+    font-size: 22px;
+    cursor: pointer;
+    font-family: 'Poppins';
+    border-radius: 50px;
+    text-decoration: none;
+}
 
-        .header-text p {
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
+.login { 
+   background: none;
+    color: black;
+    border: none ;
+    margin: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Poppins';
+    border-radius: 50px;
+    text-decoration: none;
+}    
         /* Main Hero Section */
         .hero-container {
             display: flex;
@@ -65,8 +110,7 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            z-index: 2;
-        }
+          }
 
         /* The Tilted Headline */
         .headline {
@@ -93,34 +137,6 @@
             margin-top: 5px;
         }
 
-        /* App Icon Card with Glow */
-        .app-card {
-            background: linear-gradient(135deg, #2196f3, #1976d2);
-            padding: 40px;
-            border-radius: 35px;
-            box-shadow: 0 15px 40px rgba(33, 150, 243, 0.4);
-            margin-bottom: 30px;
-            color: white;
-            width: 220px;
-            transition: transform 0.3s ease;
-        }
-
-        .app-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .app-icon h2 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            letter-spacing: 2px;
-            margin-top: 10px;
-        }
-
-        .app-icon p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
         /* Download Button */
         .download-btn {
             background: #007bff;
@@ -142,7 +158,7 @@
             background: #0056b3;
             transform: scale(1.05);
         }
-  
+
        h6 {
             margin-top: 25px;
             color: darkblue;
@@ -150,62 +166,45 @@
             font-size: 0.8rem;
             line-height: 1.4;
        }
-  
+
         .approval-text {
             margin-top: 25px;
             color: #666;
             font-size: 0.9rem;
             line-height: 1.4;
         }
+/* Footer (Fixed at Bottom) */
 
-        /* Footer */
-        .contact-footer {
-            background-color: #003366;
-            color: white;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
+footer {
+   position: fixed;
+   bottom: 0;
+    width: 100%;
+    background: darkslategray;
+    color: white;
+    font-family: 'open sans';
+    font-weight: 550;
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+}
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-weight: 500;
-            font-size: 0.8rem;
-        }
+footer .text {
+   text-decoration: none;
+   color: white;
+   font-size: 13px;
+   font-weight: 550;
+   }
 
-        .contact-item i {
-            color: #00bcd4;
-        }
-
-        /* Responsive Layout */
-        @media (max-width: 900px) {
-            .hero-container {
-                flex-direction: column-reverse;
-                text-align: center;
-                padding-top: 20px;
-            }
-            .headline {
-                transform: rotate(0deg); /* Clearer on mobile */
-            }
-            .divider {
-                display: none;
-            }
-        }
+footer a {
+   text-decoration: none;
+   color: lime;
+   font-weight: 550
+   margin-bottom: -10px;
+}
+        
     </style>
 </head>
-<body>
-
-    <header class="top-banner">
-        <div class="header-text">
-            <h1>UTTAR PRADESH BOARD OF TECHNICAL EDUCATION</h1>
-            <p>प्राविधिक शिक्षा परिषद् e-सेवाएं</p>
-        </div>
-    </header>
+<body>  
 
     <main class="hero-container">
         <div class="content-side">
@@ -214,18 +213,12 @@
                 <span class="sub-headline">With BTEUP!</span>
             </div>
 
-            <div class="app-card">
-                <div class="app-icon">
-                    <i class="fas fa-graduation-cap" style="font-size: 3rem; color: #ffd700;"></i>
-                    <h2>BTEUP</h2>
-                    <p>── OFFICIAL ──</p>
-                </div>
-            </div>
-
+            <img src="app-icon.png" height="auto" width="200px">
+            <br>
             <button class="download-btn" id="dlBtn">
                 <i class="fas fa-cloud-download-alt"></i> Download App
             </button>
-          
+
           <h6>Total Downloads : 500+ <span style="color:black">|</span> App Size : 4.2 MB</h6>
 
             <p class="approval-text">
@@ -234,17 +227,7 @@
             </p>
         </div>
 
-    </main>
-
-    <footer class="contact-footer">
-        <div class="contact-item">
-            <i class="fas fa-envelope"></i> contact@bteup.ac.in
-        </div>
-        <div class="divider"></div>
-        <div class="contact-item">
-            <i class="fas fa-globe"></i> www.bteup.ac.in
-        </div>
-    </footer>
+    </main>    
 
    <script>
     document.getElementById('dlBtn').addEventListener('click', function() {
@@ -254,5 +237,14 @@
 </script>
 
 
+</body>
+</html>
+    
+    <br><br>
+  <!-- Footer -->
+    <footer>
+        <p class="text">&copy; 2026 - Designed & Developed with ♥️ <a href="https://adtech2021.netlify.app/">ADTech India</a></p>
+    </footer>
+  <script src="a-button.js"></script>
 </body>
 </html>
