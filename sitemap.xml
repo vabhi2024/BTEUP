@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main Pages -->
+  <url>
+    <loc>https://bteup1.netlify.app/page/about.institute.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bteup1.netlify.app/page/syllabus.aspx.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bteup1.netlify.app/page/books.aspx.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bteup1.netlify.app/page/results.aspx.html</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://bteup1.netlify.app/page/job.aspx.html</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  
+  <!-- Content / Archive Pages -->
+  <url>
+    <loc>https://bteup1.netlify.app/page/10yr.aspx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://bteup1.netlify.app/page/revolution.aspx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+</urlset>
